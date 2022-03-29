@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+  <div class="signup">
+    <h1 class="signup-heading">
+      Sign up
+    </h1>
+    <form action="" class="signup-form">
+      <label for="code" class="signup-text">Mã sinh viên:</label>
+      <input type="text" class="signup-input" id="code">
+      <label for="fullname" class="signup-text">Họ và tên:</label>
+      <input type="text" class="signup-input" id="fullname">
+      <label for="email" class="signup-text">Email:</label>
+      <input type="text" class="signup-input" id="email">
+      <label for="" class="signup-text">Giới tính:</label>
+      <div class="signup-input">
+        <input type="radio" name="gender" checked>
+        <label for="">Nam</label>
+        <input type="radio" name="gender">
+        <label for="">Nữ</label>
+      </div>
+      <label for="" class="signup-text">Sở thích</label>
+      <div class="signup-input">
+        <input type="checkbox" name="checkbox">
+        <label for="">Đọc sách</label>
+        <input type="checkbox" name="checkbox">
+        <label for="">Du lịch</label>
+        <input type="checkbox" name="checkbox">
+        <label for="">Âm nhạc</label>
+        <input type="checkbox" name="checkbox">
+        <label for="">Ẩm thực</label>
+        <input type="checkbox" name="checkbox">
+        <label for="">Khác</label>
+      </div>
+      <label for="" class="signup-text">Quốc tịch:</label>
+      <input type="text" list="languages" class="signup-input">
+      <datalist id="languages">
+        <option value="Việt Nam"></option>
+      </datalist>
+      <label for="" class="signup-text">Ghi chú</label>
+      <textarea name="" id="" cols="30" rows="10" class="signup-input"></textarea>
+      <button class="signup-button">Sign up</button>
+    </form>
+  </div>
+</body>
+
+</html>
