@@ -15,43 +15,98 @@
     <h1 class="signup-heading">
       Sign up
     </h1>
-    <form action="" class="signup-form">
-      <label for="code" class="signup-text">Mã sinh viên:</label>
-      <input type="text" class="signup-input" id="code">
-      <label for="fullname" class="signup-text">Họ và tên:</label>
-      <input type="text" class="signup-input" id="fullname">
-      <label for="email" class="signup-text">Email:</label>
-      <input type="text" class="signup-input" id="email">
-      <label for="" class="signup-text">Giới tính:</label>
-      <div class="signup-input">
-        <input type="radio" name="gender" checked>
-        <label for="">Nam</label>
-        <input type="radio" name="gender">
-        <label for="">Nữ</label>
+    <form id="form-1" action="" method="get">
+      <div class="form-group">
+        <label for="id" class="from-label">Mã sinh viên</label>
+        <input type="text" id="id" name="id" class="form-control" placeholder="VD: PH26079">
+        <span class="form-message"></span>
       </div>
-      <label for="" class="signup-text">Sở thích</label>
-      <div class="signup-input">
-        <input type="checkbox" name="checkbox">
-        <label for="">Đọc sách</label>
-        <input type="checkbox" name="checkbox">
-        <label for="">Du lịch</label>
-        <input type="checkbox" name="checkbox">
-        <label for="">Âm nhạc</label>
-        <input type="checkbox" name="checkbox">
-        <label for="">Ẩm thực</label>
-        <input type="checkbox" name="checkbox">
-        <label for="">Khác</label>
+      <div class="form-group">
+        <label for="fullname" class="from-label">Họ và tên</label>
+        <input type="text" id="fullname" name="fullname" class="form-control" placeholder="VD: Lưu Phúc Huy">
+        <span class="form-message"></span>
       </div>
-      <label for="" class="signup-text">Quốc tịch:</label>
-      <input type="text" list="languages" class="signup-input">
-      <datalist id="languages">
-        <option value="Việt Nam"></option>
-      </datalist>
-      <label for="" class="signup-text">Ghi chú</label>
-      <textarea name="" id="" cols="30" rows="10" class="signup-input"></textarea>
-      <button class="signup-button">Sign up</button>
+      <div class="form-group">
+        <label for="email" class="from-label">Email</label>
+        <input type="text" id="email" name="email" class="form-control" placeholder="VD: 123@abc.xyz">
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="" class="from-label">Giới tính</label>
+        <div class="form-control">
+          <div class="gender">
+            <input type="radio" name="gender" value="Nam" id="radio"> Nam
+          </div>
+          <div class="gender">
+            <input type="radio" name="gender" value="Nữ" id="radio"> Nữ
+          </div>
+        </div>
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="checkbox" class="from-label">Sở thích</label>
+        <div class="form-control">
+          <div class="hobby">
+            <input type="checkbox" name="hobby" value="Đọc sách" id="checkbox"> Đọc sách
+          </div>
+          <div class="hobby">
+            <input type="checkbox" name="hobby" value="Du lịch" id="checkbox"> Du lịch
+          </div>
+          <div class="hobby">
+            <input type="checkbox" name="hobby" value="Âm nhạc" id="checkbox"> Âm nhạc
+          </div>
+          <div class="hobby">
+            <input type="checkbox" name="hobby" value="Ẩm thực" id="checkbox"> Ẩm thực
+          </div>
+          <div class="hobby">
+            <input type="checkbox" name="hobby" value="Khác" id="checkbox"> Khác
+          </div>
+        </div>
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="nationality" class="from-label">Quốc tịch</label>
+        <select class="form-control" name="nationality" id="nationality">
+          <option value="">Chọn quốc tịch</option>
+          <option value="Việt Nam">Việt Nam</option>
+          <option value="Anh">Anh</option>
+        </select>
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="note" class="from-label">Ghi chú</label>
+        <textarea name="note" id="note" class="form-control" placeholder="Nhập ghi chú"></textarea>
+        <span class="form-message"></span>
+      </div>
+      <button class="from-submit" type="submit">Đăng ký</button>
     </form>
   </div>
+  <script src="validator.js"></script>
+  <script>
+    Validator({
+      form: '#form-1',
+      formGroupSelector: '.form-group',
+      errorSelector: '.form-message',
+      rules: [
+        Validator.isRequired('#id','Vui lòng nhập mã sinh viên'),
+        Validator.isRequired('#fullname', 'Vui lòng nhập họ tên đầy đủ'),
+        Validator.isRequired('#email', 'Vui lòng nhập email'),
+        Validator.isEmail('#email'),
+        Validator.isRequired('#nationality','Vui lòng nhập quốc tịch'),
+        Validator.isRequired('#note'),
+        Validator.isRequired('input[name="gender"]','Vui lòng chọn giới tính'),
+        Validator.isRequired('input[type="checkbox"]','Vui lòng chọn sở thích'),
+        Validator.minLength('#password', 6),
+        Validator.isRequired('#password_confirmation'),
+        Validator.isConfirmed('#password_confirmation', function () {
+          return document.querySelector('#form-1 #password').value;
+        }, "Mật khẩu nhập lại không chính xác"),
+      ],
+      onSubmit: function (data) {
+        console.log(data);
+      }
+    });
+  </script>
 </body>
 
 </html>

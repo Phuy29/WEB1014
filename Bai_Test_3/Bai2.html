@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 2</title>
+  <link rel="stylesheet" href="bai2.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="heading">
+      Hóa đơn
+    </h1>
+    <form action="" method="get" id="form">
+      <div class="form-group">
+        <label for="customer" class="form-label">Khách hàng</label>
+        <input type="text" class="form-control" id="customer" placeholder="">
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="sector" class="form-label">Loại hàng</label>
+        <select name="" id="sector" placeholder="" class="form-control">
+          <option value="1">Loại 1</option>
+          <option value="2">Loại 2</option>
+          <option value="3">Loại 3</option>
+        </select>
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="price" class="form-label">Đơn giá</label>
+        <input type="text" class="form-control" id="price" placeholder="">
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="count" class="form-label">Số lượng</label>
+        <input type="text" class="form-control" id="count" placeholder="">
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="money" class="form-label">Thành tiền</label>
+        <input type="text" class="form-control" id="money" placeholder="" disabled>
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="place" class="form-label">Nơi nhận hàng</label>
+        <input type="radio" class="form-control" id="place" placeholder="">Nội thành
+        <input type="radio" class="form-control" id="place" placeholder="">Ngoại thành
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="fee" class="form-label">Phí vận chuyển</label>
+        <input type="text" class="form-control" id="fee" placeholder="" disabled>
+        <span class="form-message"></span>
+      </div>
+      <button class="form-btn">Đặt mua</button>
+    </form>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

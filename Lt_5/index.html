@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    var arrImg = []
+    arrImg[0] = "img/banner.jpg"
+    arrImg[1] = "img/slider1.png"
+    arrImg[2] = "img/slider2.jpg"
+    var i = 0
+    function next() {
+      i++;
+      document.querySelector(".slider-img").src = arrImg[i];
+      if (i == arrImg.length - 1) {
+        i = -1
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <img src="" alt="" class="slider-img">
+  <input type="button" value="Next" onclick="next()">
+</body>
+
+</html>

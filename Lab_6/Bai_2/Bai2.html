@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="slider">
+    <img src="img/pc1.jpg" alt="" class="img">
+    <div class="slider-btn">
+      <input type="button" value="First" onclick="first()">
+      <input type="button" value="Prev" onclick="prev()">
+      <input type="button" value="Next" onclick="next()">
+      <input type="button" value="Last" onclick="last()">
+    </div>
+  </div>
+  <script>
+    var arrImg = []
+    arrImg[0] = "img/pc1.jpg"
+    arrImg[1] = "img/pc2.jpg"
+    arrImg[2] = "img/pc3.jpg"
+    arrImg[3] = "img/pc4.jpg"
+    arrImg[4] = "img/pc5.jpg"
+
+    var i = 0
+
+    function next() { 
+      if (i === arrImg.length - 1 ) {
+        i = 0;
+      } else {
+        i++;
+      }
+      document.querySelector(".img").src = arrImg[i];
+    }
+
+    function prev() {
+      if (i === 0) {
+        i = arrImg.length - 1;
+      } else {
+        i--;
+      }
+      document.querySelector(".img").src = arrImg[i];
+    }
+
+    function first() {
+      document.querySelector(".img").src = arrImg[0];
+    }
+
+    function last() {
+      document.querySelector(".img").src = arrImg[2];
+    }
+  </script>
+</body>
+
+</html>

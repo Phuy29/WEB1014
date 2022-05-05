@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bai_1</title>
+  <style>
+    .slider {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    img {
+      width: 800px;
+      height: 500px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slider">
+    <img src="img/pc1.jpg" alt="" class="slider-img">
+    <div>
+      <button class="btn-stop" onclick="stop()">Stop</button>
+      <span class="img-number"></span>/5
+      <button class="btn-auto" onclick="auto()">Auto</button>
+    </div>
+  </div>
+  <script>
+    var imgArr = []
+    imgArr[0] = 'img/pc1.jpg'
+    imgArr[1] = 'img/pc2.jpg'
+    imgArr[2] = 'img/pc3.jpg'
+    imgArr[3] = 'img/pc4.jpg'
+    imgArr[4] = 'img/pc5.jpg'
+
+    var imgNumber = [1,2,3,4,5]
+    var i = 0
+    var imgAuto
+    var imgElement = document.querySelector('.slider-img')
+    var imgNumberElement = document.querySelector('.img-number')
+    imgNumberElement.innerText = 1
+
+    function auto() {
+      if (i == imgArr.length - 1 ) {
+        i = 0;
+      } else {
+        i++
+      }
+      imgElement.src = imgArr[i]
+      imgNumberElement.innerText = imgNumber[i]
+      imgAuto = setTimeout(auto,1000)
+    }
+
+    function stop() {
+      clearTimeout(imgAuto)
+    }
+
+  </script>
+</body>
+
+</html>

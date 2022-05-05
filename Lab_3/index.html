@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="bai1()">Bai 1</button><br>
+    <button onclick="bai2()">Bai 2</button><br>
+    <button onclick="bai3()">Bai 3</button><br>
+
+    <script>    
+        // Bai 1:
+        function bai1() {
+            while (true) {
+                var x = Number(prompt("Nhap vao 1 so nguyen duong: "));
+                if (Number.isNaN(x) || x <= 0) {
+                    alert("Nhap sai, nhap lai!");
+                } else {
+                    break;
+                }
+            }
+            var tong = 0;
+            for (let i = 0; i <= x; i++) {
+                if (i % 3 == 0) {
+                    tong = tong + i;
+                }
+            }
+            alert("Tong cac so nho hon hoac bang " + x + " la: " + tong);
+        }
+
+        // Bai 2:
+        function bai2() {
+            while (true) {
+                var x = Number(prompt("Nhap vao so phan tu cua mang: "));
+                if (Number.isNaN(x) || x <= 0) {
+                    alert("Nhap sai, nhap lai!");
+                } else {
+                    break;
+                }
+            }
+            var mang = [];
+            for (let i = 0; i < x; i++) {
+                mang[i] = Number(prompt("Nhap phan tu thu " + i + " trong mang:"));
+            }
+
+            document.write("<br> In mang: ")
+            for (let i = 0; i < x; i++) {
+                document.write(mang[i] + " ")
+            }
+
+            document.write("<br> In so chan trong mang: ")
+            for (let i = 0; i < x; i++) {
+                if (mang[i] % 2 == 0) {
+                    document.write(mang[i] + " ")
+                }
+            }
+
+            document.write("<br> In so le trong mang: ")
+            for (let i = 0; i < x; i++) {
+                if (mang[i] % 2 != 0) {
+                    document.write(mang[i] + " ")
+                }
+            }
+
+            document.write("<br> Kiem tra so chinh phuong: ");
+            function ktSoChinhPhuong(numCheck) {
+                let i = 0;
+                while (i <= numCheck) {
+                    if (Math.pow(i, 2) == numCheck) {
+                        return true;
+                        break;
+                    }
+                    i++;
+                }
+                return false;
+            }
+        }
+
+        // Bai 3:
+        function bai3() {
+            var x = Number(prompt("Nhap 1 so (0-99): "));
+            if (isNaN(x) == true) {
+                alert("Nhap sai, nhap lai!")
+            }
+            var y = Math.floor(Math.random() * 100);
+            if (x == y) {
+                document.writeln("2 so trung nhau.<br>");
+                document.writeln("So ban nhap la: " + x + "<br>");
+                document.writeln("So may tinh nhap la: " + y + "<br>");
+            } else {
+                alert("2 so khac nhau");
+                var traLoi = confirm("Ban co muon nhap tiep k? ");
+                if (traLoi == true) {
+                    var x = Number(prompt("Nhap 1 so (0-99): "));
+                    if (isNaN(x) == true) {
+                        alert("Nhap sai, nhap lai!")
+                    }
+                    var y = Math.floor(Math.random() * 100);
+                    if (x == y) {
+                        document.writeln("2 so trung nhau.<br>");
+                        document.writeln("So ban nhap la: " + x + "<br>");
+                        document.writeln("So may tinh nhap la: " + y + "<br>");
+                    } else {
+                        alert("2 so khac nhau");
+                        var traLoi = confirm("Ban co muon nhap tiep k? ");
+                        if (traLoi == true) {
+                            var x = Number(prompt("Nhap 1 so (0-99): "));
+                            if (isNaN(x) == true) {
+                                alert("Nhap sai, nhap lai!")
+                            }
+                        } else {
+                            document.write("Ban da khong muon nhap tiep");
+                        }
+                    }
+                } else {
+                    alert("Ban da khong muon nhap tiep");
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>

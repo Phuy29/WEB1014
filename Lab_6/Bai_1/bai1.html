@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form đăng kí</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main">
+
+    <form action="" method="POST" class="form" id="form-1">
+      <h3 class="heading">Form đăng ký</h3>
+
+      <div class="spacer"></div>
+
+      <div class="form-group">
+        <label for="fullname" class="form-label">Họ tên</label>
+        <input id="fullname" name="fullname" type="text" class="form-control">
+        <span class="form-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" name="email" type="text" class="form-control">
+        <span class="form-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="user" class="form-label">User</label>
+        <input id="user" name="user" type="text" class="form-control">
+        <span class="form-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="form-label">Mật khẩu</label>
+        <input id="password" name="password" type="password" class="form-control">
+        <span class="form-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="password_confirmation" class="form-label">Gõ lại mật khẩu</label>
+        <input id="password_confirmation" name="password_confirmation" type="password" class="form-control">
+        <span class="form-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="date" class="form-label">Ngày sinh</label>
+        <div class="box-main">
+          <div class="box-date">
+            <p>Ngày:</p>
+            <input id="date" name="date" type="number" class="form-control" min="1" max="31">
+          </div>
+          <div class="box-date">
+            <p>Tháng:</p>
+            <input id="date" name="date" type="number" class="form-control" min="1" max="12">
+          </div>
+          <div class="box-date">
+            <p>Năm</p>
+            <input id="date" name="date" type="number" class="form-control" min="1900" max="2020">
+          </div>
+        </div>
+        <span class="form-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="gender" class="form-label">Giới tính</label>
+        <div class="box-main">
+          <div><input id="gender" name="gender" type="radio" value="Nam" class="form-control">
+            <p>Nam</p>
+          </div>
+          <div><input id="gender" name="gender" type="radio" value="Nữ" class="form-control">
+            <p>Nữ</p>
+          </div>
+        </div>
+        <span class="form-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="phone" class="form-label">Số điện thoại</label>
+        <input id="phone" name="phone" type="text" class="form-control">
+        <span class="form-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="like" class="form-label">Giới tính</label>
+        <div class="box-main">
+          <div><input id="like" name="like" type="checkbox" value="Đọc sách" class="form-control">
+            <p>Đọc sách</p>
+          </div>
+          <div><input id="like" name="like" type="checkbox" value="Xem phim" class="form-control">
+            <p>Xem phim</p>
+          </div>
+          <div><input id="like" name="like" type="checkbox" value="Đá bóng" class="form-control">
+            <p>Đá bóng</p>
+          </div>
+        </div>
+        <span class="form-message"></span>
+      </div>
+
+      <button class="form-submit">Đăng ký</button>
+    </form>
+    <div id="data"></div>
+  </div>
+  <script src="main.js"></script>
+  <script>
+    Validator({
+      form: '#form-1',
+      formGroupSelector: '.form-group',
+      errorSelector: '.form-message',
+      rules: [
+        Validator.isRequired('#fullname', 'Vui lòng nhập họ tên đầy đủ'),
+        Validator.isRequired('#email'),
+        Validator.isEmail('#email'),
+        Validator.isRequired('#user'),
+        Validator.minLength('#password', 6),
+        Validator.isRequired('#password_confirmation'),
+        Validator.isConfirmed('#password_confirmation', function () {
+          return document.querySelector('#form-1 #password').value;
+        }, "Mật khẩu nhập lại không chính xác"),
+        Validator.minLength('#phone', 10, 'Vui lòng nhập tối thiểu 11 số'),
+      ],
+      onSubmit: function (data) {
+        console.log(data);
+      }
+    });
+    var dataElement = document.querySelector('#data');
+    dataElement.innerHTML = data;
+  </script>
+</body>
+
+</html>

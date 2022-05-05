@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bai 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main">
+    <h3 class="heading">ĐĂNG KÍ THÀNH VIÊN</h3>
+    <form id="form" action="" method="get">
+      <div class="form-group">
+        <label for="fullname" class="form-label">Họ tên</label>
+        <input type="text" id="fullname" class="form-control">
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" id="email" class="form-control">
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="phone" class="form-label">Số điện thoại</label>
+        <input type="text" id="phone" class="form-control">
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="user" class="form-label">User</label>
+        <input type="text" id="user" class="form-control">
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="pass" class="form-label">Pass</label>
+        <input type="password" id="pass" class="form-control">
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="repass" class="form-label">Repass</label>
+        <input type="password" id="repass" class="form-control">
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="intro" class="form-label">Bạn biết chúng tôi</label>
+        <input type="radio" name="intro" id="intro" class="form-control">Bạn giới thiệu
+        <input type="radio" name="intro" id="intro" class="form-control">Qua FB
+        <span class="form-message"></span>
+      </div>
+      <button class="form-btn">Đăng kí</button>
+    </form>
+  </div>
+  <div class="data">
+    <div class="data-fullname"></div>
+    <div class="data-email"></div>
+    <div class="data-phone"></div>
+    <div class="data-user"></div>
+    <div class="data-pass"></div>
+    <div class="data-repass"></div>
+    <div class="data-intro"></div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

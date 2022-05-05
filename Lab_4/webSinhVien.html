@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var sv = new Object();
+    sv.hoTen = prompt("Nhap ho ten: ");
+    sv.diem = prompt("Nhap diem: ");
+    sv.hienThi = function(){
+      var hocLuc;
+      if (this.diem >= 9) {
+        this.hocLuc = "Xuat sac"
+      }else if (this.diem >= 8) {
+        this.hocLuc = "Gioi"
+      }else if (this.diem >= 7) {
+        this.hocLuc = "Kha"
+      }else if (this.diem >= 5) {
+        this.hocLuc = "TB"
+      }
+
+      document.write("<h3>Ho ten: " + this.hoTen +"<h3>");
+      document.write("<h3>Diem TB: " + this.diem +"<h3>");
+      document.write("<h3>Hoc luc: " + this.hocLuc +"<h3>");
+    }
+    sv.hienThi();
+  </script>
+</body>
+
+</html>

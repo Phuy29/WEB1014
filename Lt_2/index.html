@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function tong2So(a,b) {
+        //     var tong = a + b;
+        //     alert("Tong 2 so la: " + tong);
+        // }
+        // tong2So(3,5)
+
+        // function tinhTong2So(a,b) {
+        //     var tong = a + b;
+        //     return tong;
+        // }
+        // document.write("Tong 2 so la: " + tinhTong2So(7,8))
+
+        // var x = Number(prompt("Nhap vao 1 so: "))
+        // if (isNaN(x) == true) {
+        //     alert("Nhap sai, nhap lai!")
+        // } else {
+        //     if (x > 0) {
+        //         document.write(x + " la so duong")
+        //     } else if (x == 0) {
+        //         document.write(x + " la so 0")
+        //     } else {
+        //         document.write(x + " la so am")
+        //     }
+        // }
+
+        // var diem = prompt("Nhap diem cua ban: ").toUpperCase();
+        // switch (diem) {
+        //     case "A":
+        //         alert("Xuat sac")
+        //         break;
+        //     case "B":
+        //         alert("Gioi")
+        //         break;
+        //     case "C":
+        //         alert("Kha")
+        //         break;
+        //     case "D":
+        //         alert("Trung binh")
+        //         break;
+        //     default:
+        //         alert("Nhap sai,nhap lai!")
+        //         break;
+        // }
+
+        // var diem1 = Number(prompt("Nhap diem cua ban: "));
+        // switch (true) {
+        //     case diem1>=9:
+        //         alert("Xuat sac")
+        //         break;
+        //     case diem1>=8:
+        //         alert("Gioi")
+        //         break;
+        //     case diem1>=7:
+        //         alert("Kha")
+        //         break;
+        //     case diem1>=5:
+        //         alert("Trung binh")
+        //         break;
+        //     default:
+        //         alert("Nhap sai,nhap lai!")
+        //         break;
+        // }
+
+        var so = Number(prompt("Nhap 1 so: "));
+        if(so % 2 == 0 ){
+            document.writeln(so + " la so chan")
+        }else{
+            document.writeln(so + " la so le")
+        }
+        
+        var a = Number(prompt("Nhap canh a: "));
+        var b = Number(prompt("Nhap canh b: "));
+        var c = Number(prompt("Nhap canh c: "));
+        if ((a+b>c) && (b+c>a) && (a+c>b)) {
+            alert("3 canh nhap da tao thanh 1 tam giac")
+        }else{
+            alert("3 canh nhap sai khong tao thanh 1 tam giac")
+        }
+        var p = (a+b+c)/2;
+        var s = Math.sqrt(p*(p-a)*(p-b)*(p-c));
+        document.writeln("Dien tich tam giac la: " + s);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

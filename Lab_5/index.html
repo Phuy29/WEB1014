@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function img1() {
+      var obj_img = document.getElementById("img");
+      obj_img.src = "img/BANH1.jpg"
+    }
+    function img2() {
+      var obj_img = document.getElementById("img");
+      obj_img.src = "img/BANH2.jpg"
+    }
+    function img3() {
+      var obj_img = document.getElementById("img");
+      obj_img.src = "img/BANH3.jpg"
+    }
+
+    var value1 = document.getElementById("input1")
+    console.log(value1)
+    // var tong1 = nhap1 * 300;
+    // document.getElementById("tong1").innerHTML = tong1;
+  </script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <header>
+        <img src="img/LOGO.png" alt="" class="header-img">
+      </header>
+      <main>
+        <section class="slider">
+          <div class="slider-main">
+            <img src="img/BANH1.jpg" alt="" class="slider-img" id="img">
+            <div class="slider-button">
+              <input type="button" value="1" class="slider-button-item" onclick="img1()">
+              <input type="button" value="2" class="slider-button-item" onclick="img2()">
+              <input type="button" value="3" class="slider-button-item" onclick="img3()">
+            </div>
+            <div class="slider-content">
+              <h2 class="slider-content-heading">
+                Bánh Ngọt Pháp La Pomme
+              </h2>
+              <div class="slider-content-title">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Rem molestiae consectetur quibusdam maxime veniam
+                sit eius harum, recusandae natus possimus aperiam non
+                accusantium, quod deserunt asperiores similique repellat
+                nisi expedita. Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Rem molestiae consectetur quibusdam
+                maxime veniam sit eius harum, recusandae.
+              </div>
+              <a href="#">Chi tiết ...</a>
+            </div>
+          </div>
+        </section>
+        <section class="shopping">
+          <div class="shopping-main">
+            <div class="shopping-heading">
+              đơn hàng mua nhanh
+            </div>
+            <div class="shopping-table">
+              <table>
+                <tr>
+                  <th>STT</th>
+                  <th>Ten SP</th>
+                  <th>Gia</th>
+                  <th>So luong</th>
+                  <th>Thanh tien</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Bánh ngọt</td>
+                  <td>300.000đ</td>
+                  <td><div class="table-input"><input type="text" id="input1"></div></td>
+                  <td id="tong1"></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Kem chocolate</td>
+                  <td>50.000đ</td>
+                  <td><input type="text" id="nhap"></td>
+                  <td><input type="text" id="tong"></td>
+                </tr>
+                <tr>
+                  <td colspan="4">Tổng tiền</td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>Lưu Phúc Huy</footer>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // for(var i = 0; i <= 10; i++){
+        //     document.write("" + i)
+        // }
+
+        // var x = Number(prompt("Nhap 1 so: "));
+        // var s = 0;
+        // for(var i = 0; i <= x; i++){
+        //     s = s + i;
+        // }
+        // document.write("Tong cac so nho hon hoac bang " + x + " la: " + s);
+
+        // var traLoi = confirm("Ban co muon di hoc k? ");
+        // if (traLoi == true) {
+        //     document.write("Ban da dong y di hoc <br>");
+        // }else{
+        //     document.write("Ban da ko dong y di hoc <br>");
+        // }
+
+        function doianh(){
+            var obj_img = document.getElementById("img");
+            obj_img.src="https://hanoi.fpt.edu.vn/wp-content/uploads/2021/04/fpt-banner-1900x900-2.jpg"
+        }
+
+        function img1() {
+            var obj_img = document.getElementById("img");
+            obj_img.src = "https://fptnamdinh.vn/wp-content/uploads/2020/12/banner.jpg"
+        }
+        function img2() {
+            var obj_img = document.getElementById("img");
+            obj_img.src ="https://hanoi.fpt.edu.vn/wp-content/uploads/2021/04/fpt-banner-1900x900-2.jpg"
+            
+        }
+
+    </script>
+    <style>
+        img{
+            width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://fptnamdinh.vn/wp-content/uploads/2020/12/banner.jpg" alt="" id="img" onmouseover="img2()" onmouseout="img1()">
+    <input type="button" value="Doi anh" onclick="img2()">
+</body>
+</html>

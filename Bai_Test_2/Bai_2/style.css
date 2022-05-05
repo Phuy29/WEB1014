@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+} 
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  padding: 30px 15px;
+  border: 1px solid #000;
+}
+
+.heading {
+  font-size: 40px;
+  padding: 0 10px;
+  text-transform: uppercase;
+}
+
+#form {
+  margin-top: 30px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group.success input {
+  border-color: green;
+}
+
+.form-group.error input {
+  border-color: red;
+}
+
+.form-label {
+  font-size: 20px;
+  display: inline-block;
+  width: 200px;
+}
+
+.form-control {
+  margin-left: 10px;
+}
+

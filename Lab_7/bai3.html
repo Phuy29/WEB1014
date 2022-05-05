@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    img {
+      width: 700px;
+      height: 500px;
+    }
+  </style>
+  <script src="../jquery-3.6.0.min.js"></script>
+  <script>
+    $(function () {
+      index = 0;
+      $("#prev").click(function () {
+        index--;
+        if (index < 0) {
+          index = 4;
+        }
+        $("#anh").fadeOut(500, function () {
+          $("#anh").attr("src", "img/pc" + index + ".jpg");
+          $("#anh").fadeIn(1000);
+        });
+      });
+      $("#next").click(function () {
+        index++;
+        // if (index = 4) {
+        //   index = 0;
+        // }
+        $("#anh").fadeOut(500, function () {
+          $("#anh").attr("src", "img/pc" + index + ".jpg");
+          $("#anh").fadeIn(1000);
+        });
+      });
+    })
+  </script>
+</head>
+
+<body>
+  <img id="anh" src="img/pc1.jpg" />
+  <br />
+  <button id="prev">Prev</button>
+  <button id="next">Next</button>
+</body>
+
+</html>

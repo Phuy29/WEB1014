@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var maSV = prompt("Nhap ma sv: ")
+        var tenSV = prompt("Nhap ten sv: ")
+        var diem = prompt("Nhap diem: ")
+        function sinhvien(maSV,tenSV,diem) {
+            this.maSV = maSV;
+            this.tenSV = tenSV;
+            this.diem = diem;
+
+            this.hienThiSV = function (){
+                document.write("Ma sinh vien la: " + this.maSV);
+                document.write("<br> Ten sinh vien la: " + this.tenSV);
+                document.write("<br> Diem sinh vien la: " + this.diem);
+            }
+
+            this.xepLoaiSV = function (){
+                document.write("<br>Xep loai: ")
+               if (diem >= 9 ) {
+                    document.write("Xuat sac");
+                }else if (diem >= 8) {
+                    document.write("Gioi");                    
+                }
+            }
+        }
+        var sv1 = new sinhvien();
+        sv1.hienThiSV();
+        sv1.xepLoaiSV();
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

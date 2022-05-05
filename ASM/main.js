@@ -43,3 +43,5 @@ function first() {
 function last() {
   document.querySelector(".slider-img").src = arrImg[2];
 }
+
+

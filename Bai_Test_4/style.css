@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 18px;
+}
+
+.container {
+  border: 1px solid black;
+  padding: 20px 10px;
+}
+
+.heading {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-label {
+  font-size: 20px;
+  display: inline-block;
+  width: 200px;
+}
+
+table {
+  border: 1px solid black;
+}
+
+td {
+  border: 1px solid black;
+}
+
+th {
+  border: 1px solid black;
+}
+
+tr {
+  border: 1px solid black;
+}
+
+.btn {
+  margin-top: 15px;
+  font-size: 20px;
+}

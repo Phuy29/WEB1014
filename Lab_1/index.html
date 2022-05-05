@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Bai 1 -->
+    <h1>Bài 1:</h1>
+    <script>
+        var a = Number(prompt("Mời bạn nhập số a: "));
+        var b = Number(prompt("Hãy nhập vào số b: "));
+        document.write("Ket qua la: " + (a + b));
+    </script>
+
+    <!-- Bai 2  -->
+    <h1>Bài 2</h1>
+    <script>
+        var a = Number(prompt("Mời bạn nhập số a: "));
+        var b = Number(prompt("Hãy nhập vào số b: "));
+        var c = Number(prompt("Hãy nhập vào số c: "));
+        var p = (a + b + c) / 2;
+        var S = Math.sqrt(p * ((p - a) * (p - b) * (p - c)));
+        document.write("Diện tích hình chữ nhật là:" + S);
+    </script>
+
+    <!-- Bai 3 -->
+    <h1>Bài 3</h1>
+    <form class="box">
+        <h2 class="box-title">
+            phép tính
+        </h2>
+        <div class="row-first">
+            <label for="">Số thứ 1: </label>
+            <input type="text" name="a">
+        </div>
+        <div class="row-second">
+            <label for="">Số thứ 2: </label>
+            <input type="text" name="b">
+        </div>
+        <div class="row-third">
+            <label for="">Kết quả: </label>
+            <input type="text" name="kq">
+        </div>
+        <div class="row-four">
+            <input type="button" value="+" onclick="kq.value=Number(a.value)+Number(b.value)" class="function">
+            <input type="button" value="-" onclick="kq.value=Number(a.value)-Number(b.value)" class="function">
+            <input type="button" value="*" onclick="kq.value=Number(a.value)*Number(b.value)" class="function">
+            <input type="button" value="/" onclick="kq.value=Number(a.value)/Number(b.value)" class="function">
+            <input type="button" value="%" onclick="kq.value=Number(a.value)%Number(b.value)" class="function">
+        </div>
+    </form>
+
+</body>
+
+</html>

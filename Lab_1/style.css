@@ -1,0 +1,32 @@
+.box{
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+.box-title{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.row-third input{
+    background-color: orange;
+}
+.row-four{
+    display: flex;
+    justify-content: space-around;
+}
+.function{
+    background-color: gray;
+    border: 2px solid black;
+    border-radius: 6px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+}
+
+

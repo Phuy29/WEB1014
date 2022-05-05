@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../jquery-3.6.0.min.js"></script>
+  <script>
+    $(function () {
+      $("#muc_gia").change(function () {
+        var val = $("#muc_gia").val();
+        $("#san_pham tr").each(function (index, tr) {
+          var color = "white";
+          var price = $(tr).find("td:eq(1)").text();
+          if (val == 1 && price < 200) {
+            color = "yellow";
+          }
+          else if (val == 2 && price >= 200 && price <= 500) {
+            color = "yellow";
+          }
+          else if (val == 3 && price > 500) {
+            color = "yellow";
+          }
+          else if (val == 0) {
+            color = "yellow";
+          }
+          $(tr).css("background-color", color);
+        });
+      });
+    })
+
+  </script>
+
+</head>
+
+<body>
+  <select id="muc_gia">
+    <option value="0">Mức giá</option>
+    <option value="1">Dưới 200</option>
+    <option value="2">Từ 200 đến 500</option>
+    <option value="3">Trên 500</option>
+  </select>
+  <hr />
+  <table border="1" id="san_pham">
+    <tr>
+      <td>iPhone 9</td>
+      <td>700</td>
+    </tr>
+    <tr>
+      <td>Samsung</td>
+      <td>400</td>
+    </tr>
+    <tr>
+      <td>Nokia</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Sony Xperia</td>
+      <td>450</td>
+    </tr>
+    <tr>
+      <td>Motorola</td>
+      <td>180</td>
+    </tr>
+    <tr>
+      <td>Oppo</td>
+      <td>600</td>
+    </tr>
+    <tr>
+      <td>bPhone</td>
+      <td>90</td>
+    </tr>
+  </table>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main">
+
+    <form action="" method="POST" class="form" id="form-1">
+      <h3 class="heading">Đặt hàng</h3>
+  
+      <div class="spacer"></div>
+  
+      <div class="form-group">
+        <label for="product" class="form-label">Sản phẩm</label>
+        <input id="product" name="product" type="text"class="form-control">
+        <span class="form-message"></span>
+      </div>
+  
+      <div class="form-group">
+        <label for="type" class="form-label">Loại</label>
+        <input id="type" name="type" type="number" class="form-control">
+        <span class="form-message"></span>
+      </div>
+  
+      <div class="form-group">
+        <label for="price" class="form-label">Đơn giá</label>
+        <input id="price" name="price" type="text" class="form-control">
+        <span class="form-message"></span>
+      </div>
+  
+      <div class="form-group">
+        <label for="place" class="form-label">Nơi nhận hàng</label>
+        <div class="box-main">
+          <div><input id="place" name="place" type="radio" value="Nội thành" class="form-control">
+            <p>Nội thành</p>
+          </div>
+          <div><input id="place" name="place" type="radio" value="Ngoại thành" class="form-control">
+            <p>Ngoại thành</p>
+          </div>
+        </div>
+        <span class="form-message"></span>
+      </div>
+  
+      <button class="form-submit">Đặt mua</button>
+    </form>
+  
+  </div>
+  <script src="main.js"></script>
+  <script>
+    Validator({
+      form: '#form-1',
+      formGroupSelector: '.form-group',
+      errorSelector: '.form-message',
+      rules: [
+        Validator.isRequired('#product','Vui lòng nhập tên sản phẩm'),
+        Validator.isRequired('#type', 'Vui lòng nhập loại sản phẩm'),
+        Validator.isRequired('#price'),
+        Validator.isRequired('#place'),
+      ],
+      onSubmit: function (data) {
+        console.log(data);
+      }
+    });
+  </script>
+</body>
+</html>
+</body>
+</html>
